@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="diana7" >
+
+  <!-- expose use_mock arg at the entry file so includes can see it -->
+  <xacro:arg name="use_mock" default="false" />
+
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find diana7_description)/urdf/common.gazebo.xacro" />
+
+  <!-- diana7 -->
+  <xacro:include filename="$(find diana7_description)/urdf/diana7.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:diana7_robot prefix="" transmission_hw_interface="$(arg transmission_hw_interface)" use_mock="$(arg use_mock)" />
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

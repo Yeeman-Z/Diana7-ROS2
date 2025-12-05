@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<library path="diana7_hardware">
+    <class
+        name="diana7_hardware/Diana7System"
+        type="diana7_hardware::Diana7System"
+        base_class_type="hardware_interface::SystemInterface">
+        <description>Diana7 hardware interface</description>
+    </class>
+</library>

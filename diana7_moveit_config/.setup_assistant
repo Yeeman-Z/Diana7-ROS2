@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: diana7_description
+    relative_path: urdf/diana_robot.urdf
+  srdf:
+    relative_path: config/diana7.srdf
+  package_settings:
+    author_name: zym
+    author_email: yeeman@buaa.edu.cn
+    generated_timestamp: 1759135833
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
