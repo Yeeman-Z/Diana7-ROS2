@@ -2,6 +2,10 @@
 
 ROS 2 驱动程序，用于控制 **Diana 7** 七轴协作机械臂，集成 ros2_control 和 MoveIt2 运动规划。
 
+## 效果展示
+
+![MoveIt2 + RViz 可视化界面](Moveit-Rviz.png)
+
 ## 项目结构
 
 ```
